@@ -2,5 +2,5 @@
   -if @followings.empty?
     %p #{@user.username} is not following anyone yet.
   - @followings.each do |following|
-    %p= avatar(following.email)
-    = following.username
+    = avatar(following.email)
+    %a{href: "/#{following.username}"} #{following.username}    
